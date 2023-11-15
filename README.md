@@ -43,4 +43,4 @@ The database is pre-populated with taxpayer IDs in the range of 1 - 1000. Enter 
 
 ## License
 
-This software is licensed under the [MIT](https://github.com/perspectivism/web-stacks-with-cobol/blob/master/LICENSE) © [Pero Matić](https://turinginc.io).
+This software is licensed under the [MIT](https://github.com/perspectivism/web-stacks-with-cobol/blob/master/LICENSE)
