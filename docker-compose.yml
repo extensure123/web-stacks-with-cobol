@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+
+  web:
+    build: ./web
+    image: web-stacks-with-cobol/web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    restart: always
+
+  api:
+    build: ./api
+    env_file:
+      - ./db/db.env
+    image: web-stacks-with-cobol/api
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    env_file:
+      - ./db/db.env
+    image: postgres:alpine
+    restart: always
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
