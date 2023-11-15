@@ -29,8 +29,6 @@ This project is divided into several parts:
     - Responsible for retrieving taxpayer information from PostgreSQL and natively passing that information into a COBOL subroutine to compute income taxes owed.
 - Data Tier
     - A PostgreSQL database containing taxpayer information.
-- Reverse Proxy
-    - Using Træfik as a reverse proxy and load balancer.
 - Docker Compose
     - For orchestrating containers and pre-populating the database server.
 
